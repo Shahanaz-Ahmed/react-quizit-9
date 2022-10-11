@@ -10,6 +10,7 @@ const Header = () => {
           QuizIt
         </h1>
       </div>
+
       <div className="navbar-link mt-4 text-2xl mr-20">
         <Link to="/">Home</Link>
         <Link to="/quiz">Quiz</Link>
