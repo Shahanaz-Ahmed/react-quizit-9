@@ -16,7 +16,7 @@ const Home = () => {
           There are different Types of quiz,for different courses
         </h2>
       </div>
-      <div className="grid grid-cols-5 gap-6 m-10">
+      <div className="grid grid-cols-5 gap-6 m-10 drop-shadow-xl rounded-md">
         {courses.data.map((course) => (
           <Courses key={course.id} course={course}></Courses>
         ))}
