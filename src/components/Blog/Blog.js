@@ -3,10 +3,12 @@ import "./Blog.css";
 
 const Blog = () => {
   return (
-    <div className="blog bg-pink-50">
+    <div className="blog bg-pink-100">
       <div>
-        <h1 className="text-5xl font-bold mb-5">Frequently Ask Question</h1>
-        <h3 className="text-4xl font-bold text-left">
+        <h1 className="text-5xl font-bold mb-5 text-purple-500">
+          Frequently Ask Question
+        </h1>
+        <h3 className="text-4xl font-bold text-left text-purple-500">
           What is the purpose of react router?
         </h3>
         <p className="text-left mb-4 text-xl">
@@ -24,7 +26,7 @@ const Blog = () => {
         </p>
       </div>
       <div>
-        <h3 className="text-4xl font-bold text-left">
+        <h3 className="text-4xl font-bold text-left text-purple-500">
           How does Context API work?
         </h3>
         <p className="text-left mb-4 text-xl">
@@ -41,7 +43,7 @@ const Blog = () => {
         </p>
       </div>
       <div>
-        <h3 className="text-4xl font-bold text-left">
+        <h3 className="text-4xl font-bold text-left text-purple-500">
           Write details about useRef hook?
         </h3>
         <p className="text-left text-xl">

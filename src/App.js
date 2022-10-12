@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./layouts/Main";
@@ -20,6 +19,7 @@ function App() {
         },
         {
           path: "/quiz",
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
           element: <Quiz></Quiz>,
         },
         {
@@ -41,6 +41,14 @@ function App() {
           element: <Quizz></Quizz>,
         },
       ],
+    },
+    {
+      path: "*",
+      element: (
+        <div>
+          <h2 className="font-bold text-2xl">This Route is not found : 404</h2>
+        </div>
+      ),
     },
   ]);
   return (

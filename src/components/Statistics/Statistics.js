@@ -17,7 +17,9 @@ const Statistics = () => {
   const statictics = useLoaderData().data;
   return (
     <div className="">
-      <h2>Statistics page</h2>
+      <h2 className="text-purple-500 font-bold text-3xl mt-20">
+        Statistics page
+      </h2>
       <div className="flex justify-center">
         <BarChart width={600} height={400} data={statictics}>
           <Line
@@ -29,7 +31,7 @@ const Statistics = () => {
           <XAxis dataKey="name" />
           <YAxis dataKey="total" />
           &nbsp;
-          <Bar dataKey="total" barSize={50} fill="#8884d8" label={statictics} />
+          <Bar dataKey="total" barSize={80} fill="#8884d8" label={statictics} />
           <Tooltip></Tooltip>
         </BarChart>
       </div>

@@ -41,7 +41,7 @@ const Questions = ({ ques }) => {
           </button>
           <ToastContainer />
         </div>
-        <div className="grid grid-cols-2 container mx-auto w-96 gap-3 mb-5 pb-10">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 container mx-auto w-96 gap-3 mb-5 pb-10">
           {options.map((option) => (
             <Option
               key={option.id}
