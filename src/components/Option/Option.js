@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Option = ({ option, correctAnswer, handleOption }) => {
   return (
     <div>
-      <div class="form-check border-2 border-indigo-600 h-full w-full">
+      <div class="form-check border-2 border-indigo-600">
         <input
           class="form-check-input"
           type="radio"
