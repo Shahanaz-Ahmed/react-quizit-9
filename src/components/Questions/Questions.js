@@ -2,8 +2,16 @@ import React from "react";
 import Option from "../Option/Option";
 
 const Questions = ({ ques }) => {
-  const { id, question, options } = ques;
-  console.log(ques);
+  const { id, question, options, correctAnswer } = ques;
+
+  const handleOption = (option, correctAnswer) => {
+    console.log(option, correctAnswer);
+    if (option === correctAnswer) {
+      alert("your answer is correct");
+    } else {
+      alert("wrong answer");
+    }
+  };
   return (
     <div>
       <div className="w-7/12 mx-auto bg-pink-100">
@@ -19,8 +27,13 @@ const Questions = ({ ques }) => {
           </a>
         </div>
         <div className="grid grid-cols-2 container mx-auto w-96 gap-3 mb-5 pb-10">
-          {options.map((option, idx) => (
-            <Option key={idx} option={option}></Option>
+          {options.map((option) => (
+            <Option
+              key={option.id}
+              option={option}
+              correctAnswer={correctAnswer}
+              handleOption={handleOption}
+            ></Option>
           ))}
         </div>
       </div>
