@@ -1,15 +1,38 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import Statistic from "../Statistic/Statistic";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+  Line,
+} from "recharts";
 
 const Statistics = () => {
-  const statistics = useLoaderData();
+  const statictics = useLoaderData().data;
   return (
-    <div>
-      <h2>This is Statisctics</h2>
-      {statistics.data.map((statistic) => (
-        <Statistic key={statistic.id} statistic={statistic}></Statistic>
-      ))}
+    <div className="">
+      <h2>Statistics page</h2>
+      <div className="flex justify-center">
+        <BarChart width={600} height={400} data={statictics}>
+          <Line
+            type="monotone"
+            className="p-5 m-5"
+            dataKey="total"
+            tick={statictics}
+          />
+          <XAxis dataKey="name" />
+          <YAxis dataKey="total" />
+          &nbsp;
+          <Bar dataKey="total" barSize={50} fill="#8884d8" label={statictics} />
+          <Tooltip></Tooltip>
+        </BarChart>
+      </div>
     </div>
   );
 };
