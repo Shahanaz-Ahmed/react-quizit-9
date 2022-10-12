@@ -1,4 +1,6 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Option = ({ option, correctAnswer, handleOption }) => {
   return (
@@ -11,11 +13,8 @@ const Option = ({ option, correctAnswer, handleOption }) => {
           id="flexRadioDefault1"
           onClick={() => handleOption(option, correctAnswer)}
         />
-        <label
-          class="form-check-label text"
-          onClick={() => handleOption(option, correctAnswer)}
-          for="flexRadioDefault1"
-        >
+        <ToastContainer />
+        <label class="form-check-label text" for="flexRadioDefault1">
           {option}
         </label>
       </div>

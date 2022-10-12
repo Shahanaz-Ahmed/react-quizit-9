@@ -1,5 +1,7 @@
 import React from "react";
 import Option from "../Option/Option";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Questions = ({ ques }) => {
   const { id, question, options, correctAnswer } = ques;
@@ -7,9 +9,13 @@ const Questions = ({ ques }) => {
   const handleOption = (option, correctAnswer) => {
     console.log(option, correctAnswer);
     if (option === correctAnswer) {
-      alert("your answer is correct");
+      toast.info("Your Answer is Correct!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
     } else {
-      alert("wrong answer");
+      toast.info("Your Answer is Wrong!", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
   };
   return (
@@ -19,12 +25,13 @@ const Questions = ({ ques }) => {
           <h1 className="font-bold text-xl mb-3 pt-10 mx-auto text-purple-600 m-5  w-9/12">
             {question}
           </h1>
-          <a href="">
+          <button>
             <img
               className="w-12 pt-8 pr-5"
               src="https://img.icons8.com/parakeet/48/000000/experimental-visible-parakeet.png"
+              alt=""
             />
-          </a>
+          </button>
         </div>
         <div className="grid grid-cols-2 container mx-auto w-96 gap-3 mb-5 pb-10">
           {options.map((option) => (
