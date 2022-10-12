@@ -1,5 +1,5 @@
 Project Name - react-quizit
-live website Link :
+live website Link : https://app.netlify.com/sites/neon-alfajores-7675f2/deploys
 
 ### What i have done in this project
 

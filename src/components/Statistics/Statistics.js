@@ -21,7 +21,7 @@ const Statistics = () => {
         Statistics page
       </h2>
       <div className="flex justify-center">
-        <BarChart width={500} height={400} data={statictics}>
+        <BarChart width={400} height={400} data={statictics}>
           <Line
             type="monotone"
             className="p-5 m-5"

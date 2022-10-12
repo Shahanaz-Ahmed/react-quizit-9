@@ -34,12 +34,11 @@ const Blog = () => {
           having to pass props down manually at every level.Context is designed
           to share data that can be considered “global” for a tree of React
           components, such as the current authenticated user, theme, or
-          preferred language.React.createContext() is all you need. It returns a
-          consumer and a provider. Provider is a component that as it's names
-          suggests provides the state to its children. It will hold the "store"
-          and be the parent of all the components that might need that store.
-          Consumer as it so happens is a component that consumes and uses the
-          state.
+          preferred language.React is all you need. It returns a consumer and a
+          provider. Provider is a component that as it's names suggests provides
+          the state to its children. It will hold the "store" and be the parent
+          of all the components that might need that store. Consumer as it so
+          happens is a component that consumes and uses the state.
         </p>
       </div>
       <div>
